@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>problem 3</title>
+	<title>problem 4</title>
 </head>
 <body>
 	<form>
@@ -15,34 +15,46 @@
 				<tr>
 					<td>
 						<button type="submit">Submit</button>
-						<button type="reset">Clear This Form</button>
+						<button type="reset" value="Reset">Clear This Form</button>
 					</td>					
 				</tr>
 			</tfoot>
 			<tbody>
 				<tr>
-					<th>Last Name</th>
-					<td><input type="name" name="lastName" value="Nakor"></td>
+					<th><label for="lastName">Last Name</label></th>
+					<td><input type="name" name="lastName" id="lastName"></td>
 				</tr>
 				<tr>
-					<th>Frist Name</th>
-					<td><input type="name" name="fristName" value="Svetlin"></td>
+					<th><label for="firstName">Frist Name</label></th>
+					<td><input type="name" name="firstName" id="firstName"></td>
 				</tr>
 				<tr>
-					<th>Address</th>
-					<td><input type="name" name="fristName" value="17 Hristo Botev Str.floor 3, apt. 12"></td>
+					<th><label for="address">Address</label></th>
+					<td><input type="Address" name="address" id="address"></td>
 				</tr>
 				<tr>
-					<th>City</th>
-					<td><input type="name" name="fristName" value="Svetlin"></td>
+					<th><label for="city">City</label></th>
+					<td>
+						<table>
+							<tr>
+								<td><input type="text" name="city" id="city"></td>
+								<th><label for="state">State</label></th>
+								<td><input type="text" name="state" id="state"></td>
+							</tr>
+						</table>
+					</td>
 				</tr>
 				<tr>
-					<th>Zip/Postal Code</th>
-					<td><input type="name" name="fristName" value="Svetlin"></td>
+					<th><label for="zipcode">Zip/Postal Code</label></th>
+					<td><input type="name" name="zipcode" id="zipcode"></td>
 				</tr>
 				<tr>
-					<th>Phone (country code, area code, number)</th>
-					<td><input type="name" name="fristName" value="Svetlin"></td>
+					<th><label for="country">Country</label></th>
+					<td><input type="text" name="country" id="country"></td>
+				</tr>
+				<tr>
+					<th><label for="phoneNum">Phone (country code, area code, number)</label></th>
+					<td><input type="tel" name="phoneNum" id="phoneNum"></td>
 				</tr>
 			</tbody>
 		</table>
