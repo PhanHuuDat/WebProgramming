@@ -1,0 +1,16 @@
+img{
+	width: 32px;
+}
+
+.headColor{
+	background-color: green;
+	color: white;
+}
+
+.customColor tr:nth-child(odd){
+	background-color: rgb(255, 255, 255) !important;
+}
+
+.customColor tr:nth-child(even){
+	background-color: rgb(236, 236, 216) !important;
+}

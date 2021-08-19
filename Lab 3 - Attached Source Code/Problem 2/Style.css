@@ -1,0 +1,51 @@
+img
+{
+    max-width: 300px;
+}
+
+a
+{
+    color: rgb(43, 73, 111);
+}
+
+a:hover{
+    text-decoration: none;
+
+}
+
+.header_1
+{
+    /*text-align: center;*/
+
+    background-color: green;
+    border-bottom: 5px solid #ccc;
+}
+
+.myMenu{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+.myMenu li{
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.myMenu li a{
+    display: inline-block;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+.myMenu li:hover > a
+{
+    background-color: rgb(242, 161, 51);
+}
+
+
+
+
+nav{
+    border-bottom: 5px solid #ccc;
+    background-color: rgb(43, 73, 111);
+}
