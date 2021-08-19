@@ -1,0 +1,19 @@
+body{
+	background-color:rgb(169, 169, 169) ;
+}
+header{
+	text-align: center;
+}
+ul li{
+	list-style-type: none;
+	font-size: 32px;
+}
+h1{
+	font-size: 56px;
+}
+footer{
+	text-align: center;
+}
+h2{
+	color: rgb(250, 247, 206);
+}
