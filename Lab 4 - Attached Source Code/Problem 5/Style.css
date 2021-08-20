@@ -1,0 +1,50 @@
+img
+{
+    max-width: 300px;
+}
+a
+{
+    color: rgb(43, 73, 111);
+}
+a:hover{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+.header_1
+{
+    background-color: #294a70;
+    border-bottom: 5px solid #f4a024;
+}
+.myMenu{
+    padding: 0;
+    margin: 0;
+}
+.myMenu > li{
+    display: inline-block;
+    margin-right: 5px;
+}
+.myMenu  li  a{
+    display: block;
+    color: white;
+    padding: 10px 20px;
+    /*white-space: nowrap;*/
+}
+.myMenu li:hover > a
+{
+    background-color: rgb(242, 161, 51);
+}
+.myMenu .sub-menu{
+    display: none;
+    border-top: 0;
+}
+.myMenu li:hover .sub-menu{
+    display: block;
+    position: absolute;
+    max-width: 200px;
+}
+.sub-menu{
+    background-color: #294a70;
+}
+

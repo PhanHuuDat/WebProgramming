@@ -1,0 +1,50 @@
+img{
+	max-width: 100%;
+	width: 100%;
+}
+.category-title{
+	margin-top: 10px;
+	margin-left: 10px;
+}
+.music-category{
+	width: 600px;
+	border: 1px solid black;
+	border-radius: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: rgb(238, 238, 238);
+}
+
+.cate-1{
+	display: flex;
+	margin: 35px 15px;
+	border: 1px solid black;
+	padding: 10px;
+}
+
+.flex-item-1{
+	width: 30%;
+	box-sizing: border-box;
+}
+.flex-item-2{
+	width: 70%;
+	box-sizing: border-box;
+	padding-left: 10px;
+}
+.btn-group{
+	text-align: right;
+}
+
+.locateBtn-listen{
+	width: 80px;
+	height: 30px;
+	background-image: url("listen.png");
+	color: white;
+	padding-right: 0;
+}
+.locateBtn-add{
+	width: 70px;
+	height: 30px;
+	background-image: url("add.png");
+	color: white;
+}
