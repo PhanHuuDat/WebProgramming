@@ -24,8 +24,9 @@ ul{
 .myMenu > li{
     display: inline-block;
     margin-right: 5px;
+    position: relative;
 }
-.myMenu  li  a{
+.myMenu > li  a{
     display: block;
     color: white;
     padding: 10px 20px;
@@ -38,13 +39,14 @@ ul{
 .myMenu .sub-menu{
     display: none;
     border-top: 0;
+    background-color: #294a70;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 44px;
+    width: 200px;
 }
 .myMenu li:hover .sub-menu{
     display: block;
-    position: absolute;
-    max-width: 200px;
-}
-.sub-menu{
-    background-color: #294a70;
 }
 
