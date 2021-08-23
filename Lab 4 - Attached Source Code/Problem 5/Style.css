@@ -36,7 +36,7 @@ ul{
 {
     background-color: rgb(242, 161, 51);
 }
-.myMenu .sub-menu{
+.sub-menu{
     display: none;
     border-top: 0;
     background-color: #294a70;

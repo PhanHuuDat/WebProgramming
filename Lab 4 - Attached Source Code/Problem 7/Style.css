@@ -1,0 +1,22 @@
+.search-block {
+    width: 400px;
+}
+
+input[type=text] {
+    width: 130px;
+    transition: width 0.4s ease-in-out;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-image: url(searchicon.png);
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+    padding: 12px 20px 12px 40px;
+    border-radius: 4px;
+    border: 2px solid black;
+    outline: none;
+}
+
+input[type=text]:focus {
+    width: 100%;
+    border: 2px solid skyblue; !important;
+}
