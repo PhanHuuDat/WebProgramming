@@ -7,6 +7,44 @@
 .custom-header a{
 	color: white;
 }
-.locate-text{
-
+.mid-header{
+	height: 120px;
+	padding-top:15px ;
+	padding-bottom: 15px;
+}
+.mid-header img{
+	max-height: 90px;
+	width: auto;
+}
+.mid-header .search-group{
+	margin-top: 26px;
+}
+.mid-header span{
+	width: 50px;
+	height: 50px;
+	border-radius: 50px;
+	display: inline-block;
+	text-align: center;
+	background-color: rgb(235, 57, 43);
+}
+.mid-header span i{
+	color: white;
+	line-height: 50px;
+}
+.shopping-cart{
+	margin-top: 15px;
+}
+.shopping-cart .shopping-number{
+	font-size: 14;
+	font-weight: bold;
+ 	margin-bottom: 0px;
+}
+.shopping-cart .shopping-price{
+	color: rgb(235, 57, 43);
+	font-weight: bold;
+}
+@media (max-width:  768.98px){
+	.mid-header .shoping{
+		max-width: 180px;
+	}
 }
