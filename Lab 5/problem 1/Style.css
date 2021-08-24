@@ -34,14 +34,17 @@
 .shopping-cart{
 	margin-top: 15px;
 }
+
 .shopping-cart .shopping-number{
 	font-size: 14;
 	font-weight: bold;
- 	margin-bottom: 0px;
+	margin-top: 5px;
+	margin-bottom: 0;
 }
 .shopping-cart .shopping-price{
 	color: rgb(235, 57, 43);
 	font-weight: bold;
+	margin-bottom: 0;
 }
 @media (max-width:  768.98px){
 	.mid-header .shoping{
