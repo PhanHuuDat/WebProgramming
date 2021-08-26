@@ -1,0 +1,80 @@
+.title{
+	border-bottom: 1px solid grey;
+
+}
+.title h2{
+	display: inline-block;
+	border-bottom: 5px solid orange;
+	margin: 0;
+}
+.product{
+	margin-top: 10px;
+}
+.product img{
+	max-width: 100%;
+	width: 100%;
+	border: 1px solid grey;
+}
+.product a{
+	color: black;
+}
+a, a:hover{
+	text-decoration: none;
+}
+.product-img-wrapper{
+	position: relative;
+}
+.product-name{
+	font-weight: bold;
+	text-align: center;
+}
+.contact-phone{
+	color: orange;
+	text-align: center;
+	font-weight: bold;
+}
+.product:hover{
+	
+}
+.product:hover img{
+	border: none;
+}
+.product:hover .hover-option{
+	display: block;
+}
+.hover-option{
+	display: none;
+	width: 100%;
+	height: 100%;
+	border: 3px solid orange;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 15px;
+}
+.hover-option a{
+	text-decoration: none;
+	display: block;
+	margin-bottom: 20px;
+	padding: 5px 20px;
+	background-color: orange;
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	
+}
+.hover-option a:first-child{
+	margin-top: calc(50% - 50px);
+}
+.product-order{
+	top: 0;
+}
+.set-button{
+	font-weight: bold;
+	width: 80%;
+	height: 20%;
+	background-color: orange;
+	color: white;
+	border: none;
+}
