@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>problem 5</title>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+	<style type="text/css">
+		.col-md-3 img{
+			width: 100%;
+			max-width: 100%;
+		}
+		#imgtext {
+			position: absolute;
+			bottom: 15px;
+			left: 15px;
+			color: white;
+			font-size: 20px;
+		}
+		.exit{
+			position: relative;
+		}
+		.closebtn {
+			position: absolute;
+			top: 10px;
+			right: 15px;
+			color: white;
+			font-size: 35px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-3">
+				<img src="img_nature.jpg" alt="Nature" onclick="myFunction(this);">
+			</div>
+			<div class="col-md-3">
+				<img src="img_snow.jpg" alt="Snow" onclick="myFunction(this);">
+			</div>
+			<div class="col-md-3">
+				<img src="img_mountains.jpg" alt="Mountains" onclick="myFunction(this);">
+			</div>
+			<div class="col-md-3">
+				<img src="img_lights.jpg" alt="Lights" onclick="myFunction(this);">
+			</div>
+		</div>
+	</div>
+		
+
+	<div class="exit">
+		<span onclick="closeThisImg(this)" class="closebtn">&times;</span>
+		<img id="expandedImg" style="width:100%">
+		<div id="imgtext"></div>
+	</div>
+
+	<script type="text/javascript">
+		function myFunction(imgs) {
+			var expandImg = document.getElementById("expandedImg");
+			var imgText = document.getElementById("imgtext");
+			expandImg.src = imgs.src;		
+			imgText.innerHTML = imgs.alt;		
+			expandImg.parentElement.style.display = "block";
+		}
+		function closeThisImg(img){
+			img.parentElement.style.display = 'none';
+		}
+	</script>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</body>
+</html>

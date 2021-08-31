@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>problem 3</title>
+	<style type="text/css">
+		.progress{
+			height: 30px;
+			width: 100%;
+			border: 1px solid grey;
+			position: relative;
+		}
+		.progressing{
+			height: 30px;
+			width: 10%;
+			background-color: green;
+			color: #fff;
+			position: absolute;
+			line-height: 30px;
+			font-weight: bold;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<h1>Progress bar</h1>
+		<div class="progress">
+			<div id="mybar" class="progressing">
+				0%
+			</div>
+		</div>
+		<br>
+		<button onclick="clicka()">Click me</button>
+	</div>
+
+	<script type="text/javascript">
+		function clicka(){
+			let info = document.getElementById("mybar");
+			let width = 1;
+			let move = setInterval(frame, 100);
+			function frame(){
+				if(width == 100){
+					clearInterval(move);
+				}else{
+					width++;
+					info.style.width = width +"%";
+					info.innerHTML = width +"%";
+				}
+			}
+		}
+	</script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</body>
+</html>
