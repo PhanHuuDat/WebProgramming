@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Problem 4</title>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+	<style type="text/css">
+	body{
+		margin: 0px auto;
+		width: 1280px;
+	}
+	.header{
+		background-color: #f44336;
+		padding: 5px 10px 10px;
+		color: white;
+		text-align: center;
+	}
+
+	.header:after{
+		content: "";
+		display: table;
+		clear: both;
+	}
+	.myDIV h2{
+		margin: 5px;
+	}
+	input{
+		margin: 0;
+		border: none;
+		width: 75%;
+		float: left;
+		padding: 10px;
+		font-size: 16px;
+	}
+	.addBtn{
+		padding: 10px;
+		background-color: grey;
+		color: #555;
+		text-align: center;
+		font-size: 16px;
+		width: 25%;
+		float: left;
+		cursor: pointer;
+		transition: 0.3s;
+	}
+	.close{
+		cursor: pointer;
+	}
+	.addBtn:hover{
+		background-color: #bbb;
+	}
+	#myUL{
+		list-style-type: none;
+	}
+	.checked{
+		list-style-type: '✓';
+		text-decoration: line-through;
+	}
+	</style>
+</head>
+<body>
+	<div id="myDIV" class="header">
+		<h2>My to do list</h2>
+		<input type="text" id="myInput" placeholder="Title...">
+		<span onclick="newElement()" class="addBtn">Add</span>
+	</div>
+	<ul id="myUL">
+		<li>Hit the gym<span class="close">x</span></li>
+		<li class="checked">Pay bills<span class="close">x</span></li>
+	</ul>
+
+	<script type="text/javascript">
+		let list = document.querySelector("#myUL");
+		list.addEventListener("click", function(e){
+			if(e.target.tagName ==="LI"){
+				e.target.classList.toggle('checked');
+			}else if(e.target.tagName ==="SPAN"){
+				e.target.parentElement.style.display = 'none';
+			}
+		}, false);
+		function newElement(){
+			let inputValue = document.getElementById("myInput");
+			if(inputValue.value === ''){
+				alert("must not empty!");
+			}else{
+				let li = document.createElement("li");
+				li.innerHTML = inputValue.value + "<span class='close'>x</span>";
+				document.getElementById("myUL").appendChild(li);
+				inputValue.value = "";
+			}
+		}
+	</script>
+</body>
+</html>
