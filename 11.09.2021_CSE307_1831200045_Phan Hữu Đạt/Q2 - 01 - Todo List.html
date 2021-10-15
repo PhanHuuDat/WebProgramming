@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Q2 - todo List</title>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+	<style type="text/css">
+	body{
+		margin: 0px auto;
+		width: 1280px;
+	}
+	.header{
+		border: 1px solid black;
+		padding: 5px 10px 10px;
+		
+		
+	}
+
+	.header:after{
+		content: "";
+		display: table;
+		clear: both;
+	}
+	.myDIV h2{
+		margin: 5px;
+	}
+	input{
+		margin: 0;
+		border: none;
+		width: 75%;
+		float: left;
+		padding: 10px;
+		font-size: 16px;
+	}
+	.addBtn{				
+		float: left;
+		cursor: pointer;
+		transition: 0.3s;
+	}
+	.close{
+		cursor: pointer;
+	}
+	.addBtn:hover{
+		background-color: #bbb;
+	}
+	.setBtn{
+		border: 1px solid black;
+		float: right;
+		margin: 0;
+		color: white;
+		background-color: #04AA6D;
+		border: none;
+		border-radius: 0;
+	}
+	.list-group li{
+		position: relative;
+	    display: block;
+	    padding: 0;
+		line-height: 36px;
+		padding-left: 10px;
+		margin: 5px 0;
+		border: 1px solid !important;
+		border-radius: 3px !important;
+	}
+	.list-group li:nth-child(even){
+		background-color: rgb(220, 220, 220);
+	}
+	.list-group li:nth-child(odd){
+		background-color: rgb(238, 238, 238);
+	}
+	.list-group li:hover{
+		background-color: grey;
+	}
+	.list-group li:hover .setBtn{
+		background-color: #f44336;
+	}
+	#myUL{
+		list-style-type: none;
+	}
+	.checked{
+		text-decoration: line-through;
+	}
+	</style>
+</head>
+<body>
+	<div id="myDIV" class="header">
+		<h2>My to do list</h2>
+		<form>
+			<div class="input-group mb-3">
+				<input id="myInput" type="text" class="form-control" placeholder="Enter your task" aria-label="Enter your task" aria-describedby="button-addon2">
+				<div class="input-group-append">
+					<button onclick="newElement()" class="btn btn-outline-secondary addBtn" type="button" id="button-addon2">Add</button>
+				</div>
+			</div>
+		</form>	
+
+		<ul id="myUL" class="list-group">
+			<li>Item 1<button type="button" class="btn setBtn">Delete</button></li>
+			<li>Item 2<button type="button" class="btn setBtn">Delete</button></li>
+			<li>Item 3<button type="button" class="btn setBtn">Delete</button></li>
+			<li class="checked">Item 4<button type="button" class="btn setBtn">Delete</button></li>
+		</ul>
+	</div>
+	
+
+	<script type="text/javascript">
+		let list = document.querySelector("#myUL");
+		list.addEventListener("click", function(e){
+			if(e.target.tagName ==="LI"){
+				e.target.classList.toggle('checked');
+			}else if(e.target.tagName ==="BUTTON"){
+				e.target.parentElement.style.display = 'none';
+			}
+		}, false);
+		function newElement(){
+			let inputValue = document.getElementById("myInput");
+			if(inputValue.value === ''){
+				alert("must not empty!");
+			}else{
+				let li = document.createElement("li");
+				li.innerHTML = inputValue.value + "<button type='button' class='btn setBtn'>Delete</button>";
+				document.getElementById("myUL").appendChild(li);
+				inputValue.value = "";
+			}
+		}
+	</script>
+</body>
+</html>

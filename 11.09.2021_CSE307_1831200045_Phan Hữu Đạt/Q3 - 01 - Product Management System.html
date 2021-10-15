@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Product Management System</title>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+        <style type="text/css">
+            header {
+                text-align: center;
+                background-color: #111;
+                color: #fff;
+                font-size: 20px;
+                font-weight: bold;
+                padding: 20px;
+            }
+            .left-side {
+                background-color: #eee;
+                padding-top: 15px;
+            }
+            .BrandList li { cursor: pointer; }
+
+            main { padding: 10px; }
+            .card-header {
+                margin-bottom: 20px;
+                font-weight: bold;
+            }
+            .Title, label { font-weight: bold; }
+            .NewProduct {
+                margin-bottom: 40px;
+                padding-bottom: 20px;
+            }
+            #Submit {
+                padding-left: 20px;
+                padding-right: 20px;
+            }            
+            .GroupElements { padding: 0px 10px; }
+            .group-List img {
+                max-width: 100px;
+                height: auto;
+            }
+            
+            .group-List .row { margin-top: 20px; }
+            footer {
+                padding: 20px 0px;  
+                background: #111;
+                text-align: center;
+                font-weight: bold;
+                color: #fff;
+            }
+        </style>        
+    </head>
+
+    <body>
+        <header>
+            PRODUCT MANAGEMENT SYSTEM              
+        </header>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-2 left-side">
+                    <h2>Brand List</h2>
+                    <ul class="BrandList">
+                    	
+                    </ul>
+                </div>
+
+                <div class="col-10">
+                    <main class="main-content"> 
+                        <section class="NewProduct">                 
+                            <div class="card-header">
+                                Add a new product
+                            </div>                                
+
+                            <div class="GroupElements">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label">Product Name</label>
+                                            <div class="col-sm-10">
+                                                <input id="pName" type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label">Price</label>
+                                            <div class="col-sm-10">
+                                                <input id="pPrice" type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label">Quantity</label>
+                                            <div class="col-sm-10">
+                                                <input id="pQuantity" type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label">Image Link</label>
+                                            <div class="col-sm-10">
+                                                <input id="pImg" type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label">Description</label>
+                                            <div class="col-sm-10">
+                                                <textarea id="pDes" class="form-control" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label">Brand</label>
+                                            <div class="col-sm-10">
+                                                <select id="Brand" class="form-control">
+                                                	<!-- <option value="Brand 1">Brand 1</option>
+                                                	<option value="Brand 2">Brand 2</option> -->
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="offset-md-1 col-sm-11">
+                                        <button id="submit" type="button" class="btn btn-primary" >Add</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- End of the form section -->
+
+                        <section class="group-Title">
+                            <div class="card-header">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <h3 class="student-list">PRODUCT LIST</h3>
+                                    </div>
+                                    <div class="col-3">
+                                        <input id="seachBar" type="text" class="form-control" placeholder="Product Name">
+                                    </div>
+                                    <div class="col-1">
+                                        <button id="searchBtn" class="form-control" type="button">Search</button>
+                                    </div>
+                                </div>                        
+                            </div>
+                            <div class="row">
+                                <div class="col-1 Title">#</div>
+                                <div class="col-1 Title">Image</div>
+                                <div class="col-2 Title">Product Name</div>                   
+                                <div class="col-2 Title">Price</div>
+                                <div class="col-1 Title">Quantity</div>
+                                <div class="col-4 Title">Description</div>
+                                <div class="col-1 Title">Function</div>
+                            </div>
+                        </section>
+                        <!-- End of the product title group -->
+
+                        <section class="group-List">
+                        	<!-- <div class="row">
+	                            <div class="col-1">1</div>
+	                            <div class="col-1"><img src="https://www.xtmobile.vn/vnt_upload/product/04_2018/ip_X_gray_800x800.jpg" class="img-fluid"></div>
+	                            <div class="col-2">Product 1</div>                   
+	                            <div class="col-2">20.000.000 VNĐ</div>
+	                            <div class="col-1">20</div>
+	                            <div class="col-4">This is the product description.</div>
+	                            <div class="col-1">
+	                                <button type="button" class="btn btn-outline-danger">Delete</button>
+	                            </div>
+	                        </div> -->
+                        </section>
+                    	<!-- End of the product list group -->
+                    </main>
+                </div>
+            </div>
+        </div>
+        <footer>
+            Product Management System - 2021
+        </footer>   
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                let products, brands;
+                $.get(
+                    'http://45.32.46.181/getProducts.php?GetProducts=All',
+                    {Type : "All"},
+                    function(data){
+                        products = data;
+                        ShowProduct(products);
+                        console.log(products);
+                    }, "json"
+                );                
+                $.get(
+                    'http://45.32.46.181/getProducts.php?GetProducts=Brand',
+                    {Type : "Brand"},
+                    function(data){
+                        brands = data;
+                        ShowBrand(brands);
+                        console.log(brands);
+                    }, "json"
+                ); 
+
+                // show product
+
+                function ShowProduct(productList){
+                    let s= "", i = 0;
+                    for(let product of productList){
+                        s += `
+                            <div class="row" data-id="${product.Code}">
+                                <div class="col-1">${++i}</div>
+                                <div class="col-1"><img src="https://www.xtmobile.vn/vnt_upload/product/04_2018/ip_X_gray_800x800.jpg" class="img-fluid"></div>
+                                <div class="col-2">${product.Name}</div>                   
+                                <div class="col-2">${product.Price}</div>
+                                <div class="col-1">${product.Quantity}</div>
+                                <div class="col-4">${product.Description}</div>
+                                <div class="col-1 delBtn">
+                                    <button type="button" class="btn btn-outline-danger del" data-id="${product.Code}">Delete</button>
+                                </div>
+                            </div>`;
+                    }
+                    $(".group-List").html("");
+                    $(".group-List").append(s);
+                }
+
+                // show Brand
+
+                function ShowBrand(brandList){
+                    let s= "", option = "";
+                    for(let brand of brandList){
+                        s+= `<li>${brand}</li>`;
+                        option+=`<option value="${brand}">${brand}</option>`;
+                    }
+                    $(".BrandList").append(s);
+                    $("#Brand").append(option);
+                }
+
+                // insert
+
+                $("#submit").click(function(){
+                    let _Name = $("#pName").val();
+                    let _Price = $("#pPrice").val();
+                    let _Quantity = $("#pQuantity").val();
+                    let _Img = $("#pImg").val();
+                    let _Des = $("#pDes").val();
+                    
+                    let isAppear = false, _index=0;
+                    for(_index in products){
+                        if(products[_index].Name == _Name){
+                            isAppear = true;
+                            break;
+                        }
+                    }
+
+                    if (isAppear==false) {
+                        products.unshift({
+
+                            "Name" : _Name,
+                            "Price" : _Price,
+                            "Quantity" : _Quantity,
+                            "Description" : _Des,
+                            "Code" : ""
+                        });
+                    }else{
+                        // staffs[_index].FistName = _FirstName;
+                        // staffs[_index].LastName = _LastName;
+                        // staffs[_index].Department = _Dept;
+                    }
+                    ShowProduct(products);
+                });
+
+                // del
+
+                $(".delBtn").on("click",".del", function(ev){
+                    let _confirm = confirm("are you sure?");
+                    if(_confirm){
+                        let _nodeDel = ev.target;
+                        _nodeDel = $(_nodeDel);
+                        let _ID = _nodeDel.attr("data-id");
+
+                        for(let _index in products){
+                            if(products[_index].Code == _ID){
+                                products.splice(_index, 1);
+                                break;
+                            }
+                        }
+                        ShowProduct(products);
+                    }
+
+                });
+                
+                
+                $(".BrandList").on("click","li", function(ev){
+                    let _node = ev.target;
+                    _node = $(_node);
+                    let _deptName = _node.text();
+                    let _tempList = [];
+                    for(let data of products){
+                        if(data.CateCode.indexOf(_deptName)!= -1){
+                            _tempList.push(data);
+                        }
+                    }
+                    ShowProduct(_tempList);
+                });
+                // timkiem
+                $("#searchBtn").click(function(){
+                    let _name = $("#seachBar").val();
+                    let _tempList = [];
+                    for(let data of products){
+                        if(data.Name.indexOf(_name) != -1){
+                            _tempList.push(data);
+                        }
+                    }
+                    ShowProduct(_tempList);
+                });
+            });
+        </script>
+    </body>
+</html> 
